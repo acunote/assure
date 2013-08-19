@@ -2,7 +2,7 @@ require 'rubygems'
 
 SPEC = Gem::Specification.new do |s|
     s.name        = "assure"
-    s.version     = "0.1"
+    s.version     = "0.1.1"
     s.author      = "Pluron, Inc."
     s.email       = "support@pluron.com"
     s.homepage    = "http://github.com/acunote/assure"
