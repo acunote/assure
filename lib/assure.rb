@@ -32,13 +32,12 @@ end
 
 def get_caller_location_for_assure(options = {:depth => 2})
     caller_method = caller(options[:depth])[0]
-
     #Sample output is:
     #   test/unit/assure_test.rb:9:in `test_assure
-    #When working dir isn't set, the RAILS_ROOT will be prepended to the path
-    caller_method =~ /([^:]+):([0-9]+):in `(.+)'/
+    #   test.rb:3
+    caller_method =~ /([^:]+):([0-9]+)(:in `(.+)')*/
     file = $1
     line = $2
-    method = $3
+    method = $4
     [file, method, line]
 end
